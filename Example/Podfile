@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NRMirror_Example' do
+  pod 'NRMirror', :path => '../'
+
+  target 'NRMirror_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
