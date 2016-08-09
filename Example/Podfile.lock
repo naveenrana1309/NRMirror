@@ -1,0 +1,16 @@
+PODS:
+  - NRMirror (0.1.0)
+
+DEPENDENCIES:
+  - NRMirror (from `../`)
+
+EXTERNAL SOURCES:
+  NRMirror:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NRMirror: cee35df9edbdc7aea8626b829710aebcd6cba81f
+
+PODFILE CHECKSUM: 8953f7f09b14f985c9d77fca0f98bc2e3f367fe4
+
+COCOAPODS: 1.1.0.beta.1

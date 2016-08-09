@@ -1,0 +1,6 @@
+framework module NRMirror {
+  umbrella header "NRMirror-umbrella.h"
+
+  export *
+  module * { export * }
+}

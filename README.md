@@ -22,7 +22,7 @@ pod "NRMirror"
 
 ## Author
 
-naveen_appster, naveenrana1309@gmail.com
+Naveen Rana, naveenrana1309@gmail.com
 
 ## License
 

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NRMirror'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of NRMirror.'
+  s.version          = '1.0'
+  s.summary          = 'NRMirror helps you to sync your model with web service response or any input dictionary.So its work like a object mapper for you'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,15 +18,14 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+NRMirror helps you to sync your model with web service response or any input dictionary.So its work like a object mapper for you. So dont worry about your model syncing , just declare your models and name your key same as your dictionary/Json key and you are done. NRMirror supporting of all types Int, String ,Float , Bool etc.. and NRMirror subclass models.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/NRMirror'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/naveenrana1309/NRMirror'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'naveen_appster' => 'naveenrana1309@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/NRMirror.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Naveen Rana' => 'naveenrana1309@gmail.com' }
+  s.source           = { :git => 'https://github.com/naveenrana1309/NRMirror.git', :tag => 'v1.0' }
+  # s.social_media_url = 'https://www.linkedin.com/in/naveen-rana-9a371a40'
 
   s.ios.deployment_target = '8.0'
 
@@ -37,6 +36,7 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # s.frameworks = 'Foundation'
+
 end
+
