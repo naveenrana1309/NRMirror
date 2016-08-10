@@ -8,17 +8,18 @@
 
 import Foundation
 
+public
 class NRMirror: NSObject {
     
     
-    required override init() {
+    required override public init() {
         super.init()
     }
-    override func setValue(value: AnyObject!, forUndefinedKey key: String) {
+    override public func setValue(value: AnyObject!, forUndefinedKey key: String) {
         print("\(key) should be in proper format i.e: it should not be optional or it should be of NRMirror type class")
     }
 
-    required init(dict: AnyObject) {
+    required public init(dict: AnyObject) {
         super.init()
         let mirror = Mirror(reflecting: self) // NRMirror subclass mirroring
         
