@@ -13,8 +13,10 @@
   },
   "source": {
     "git": "https://github.com/naveenrana1309/NRMirror.git",
-    "tag": "v1.0"
+    "branch": "master",
+    "tag": "1.0"
   },
+  "social_media_url": "https://www.linkedin.com/in/naveen-rana-9a371a40",
   "platforms": {
     "ios": "8.0"
   },
