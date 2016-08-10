@@ -244,7 +244,7 @@ class NRMirror: NSObject {
         }
     }
     
-    class func getClassName(className: String) -> String? {
+    class func getClassName(className: String) -> String? { // class name i.e <Swift.String>
         
         if className.containsString(">") {
             let subtype = className.componentsSeparatedByString(">")[0].componentsSeparatedByString("<").last
@@ -256,7 +256,7 @@ class NRMirror: NSObject {
     }
     
     class func isArrayDictionaryContainOptionalProperty(className: String) -> Bool {
-        if className.containsString("Optional") {
+        if className.containsString("Optional") { // check is array or dictionary contain any optional property
             return true
         }
         return false
@@ -284,10 +284,10 @@ class NRMirror: NSObject {
         }
         appName = appName.characters.split(isSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
         
-        // Clean up special characters
-        return appName.componentsSeparatedByCharactersInSet(illegalCharacterSet).joinWithSeparator("_")
+        // remove special characters and join them with _
+        return appName.componentsSeparatedByCharactersInSet(specialIllegalCharacterSet).joinWithSeparator("_")
     }
     /// Character that will be replaced by _ from the keys in a dictionary / json
-    private static let illegalCharacterSet = NSCharacterSet(charactersInString: " -&%#@!$^*()<>?.,:;")
+    private static let specialIllegalCharacterSet = NSCharacterSet(charactersInString: " -&%#@!$^*()<>?.,:;")
     
 }

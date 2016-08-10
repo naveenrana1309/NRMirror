@@ -1,4 +1,11 @@
+
+
 # NRMirror
+
+[![Version](https://img.shields.io/cocoapods/v/NRMirror.svg?style=flat)](http://cocoapods.org/pods/NRMirror)
+[![License](https://img.shields.io/cocoapods/l/NRMirror.svg?style=flat)](http://cocoapods.org/pods/NRMirror)
+[![Platform](https://img.shields.io/cocoapods/p/NRMirror.svg?style=flat)](http://cocoapods.org/pods/NRMirror)
+
 
 NRMirror helps you to sync your models with web service response or any input dictionary and. So its work like a object mapper for your project. So dont worry about manually mapping your model object with your json/dictionary , you have to just declare your model and name your key same as your dictionary/Json key and you are done. NRMirror supporting of all types Int, String ,Float , Bool etc.. and NRMirror subclass models. NRMirror is based on swift mirror refelection. For more info about Mirror refer apple doc [Mirror Info](https://developer.apple.com/library/tvos/documentation/Swift/Reference/Swift_Mirror_Structure/index.html)
 

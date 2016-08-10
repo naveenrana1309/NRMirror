@@ -25,7 +25,7 @@ NRMirror helps you to sync your model with web service response or any input dic
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Naveen Rana' => 'naveenrana1309@gmail.com' }
   s.source           = { :git => 'https://github.com/naveenrana1309/NRMirror.git', :branch => 'master', :tag => s.version.to_s}
-  # s.social_media_url = 'https://www.linkedin.com/in/naveen-rana-9a371a40'
+   s.social_media_url = 'https://www.linkedin.com/in/naveen-rana-9a371a40'
 
   s.ios.deployment_target = '8.0'
 
