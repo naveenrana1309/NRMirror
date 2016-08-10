@@ -1,5 +1,5 @@
 PODS:
-  - NRMirror (0.1.0)
+  - NRMirror (1.0)
 
 DEPENDENCIES:
   - NRMirror (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  NRMirror: cee35df9edbdc7aea8626b829710aebcd6cba81f
+  NRMirror: 42517892b62b140cdbb949599374e01142ed4e01
 
 PODFILE CHECKSUM: 8953f7f09b14f985c9d77fca0f98bc2e3f367fe4
 

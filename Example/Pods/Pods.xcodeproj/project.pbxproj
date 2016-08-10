@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		010F41DD1D59B4F600CA039F /* NRMirror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F41DC1D59B4F600CA039F /* NRMirror.swift */; };
+		017F3061E2F1F3A1657C80FAAB14BAC0 /* NRMirror-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AAC612779B7D8D7EA999A6E4BA42B0 /* NRMirror-dummy.m */; };
 		035F2C92ACEE030F358BC288AB78E284 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		257CE4E317506AD03A97A9456F355EAE /* NRMirror-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AAC612779B7D8D7EA999A6E4BA42B0 /* NRMirror-dummy.m */; };
 		32D3625CF12327EDBE140F48A5E4F718 /* Pods-NRMirror_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F039F2BC2B96B0EF58BAFDC0A696A7D2 /* Pods-NRMirror_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41F9A63456DA1AD31DA9DE3C4F6B2A95 /* NRMirror-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE59945B6C2EAAB8CED92AFC8B4EB71 /* NRMirror-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49EA78CFC471E67E1312CBBDA953ED78 /* NRMirror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3370743C7493D967CB48BAD93CCEDFEF /* NRMirror.swift */; };
 		4DB1AB27A334C033A51CA8DF7945C781 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		96E97A3564E6AD929D272A4D065EFEF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		C821AE6DA98D297934E7278C83E845DE /* Pods-NRMirror_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 981349ADDDC3210764CB9E7564341BA4 /* Pods-NRMirror_Tests-dummy.m */; };
@@ -30,11 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		010F41DC1D59B4F600CA039F /* NRMirror.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRMirror.swift; sourceTree = "<group>"; };
 		03D541C742893FB0D21DDABABC141DEB /* Pods-NRMirror_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NRMirror_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		043AF6E6EDE057E337A729A5A6DA610D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FF453C321F8201A5013C1E28623353B /* Pods-NRMirror_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NRMirror_Example.modulemap"; sourceTree = "<group>"; };
 		1EE7EE7409638ECD8B9FE9A905FD96E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3370743C7493D967CB48BAD93CCEDFEF /* NRMirror.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NRMirror.swift; sourceTree = "<group>"; };
 		34E17033E31B2856D6DD4136746731B2 /* Pods-NRMirror_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NRMirror_Example-frameworks.sh"; sourceTree = "<group>"; };
 		49A0FBFAA752BDC89C6888E54B52E50E /* Pods-NRMirror_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NRMirror_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		584239E2614466D593C7AB92CAD0358A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		0A7B9DE91E97B5E2AF59B00FA370538C /* NRMirror */ = {
 			isa = PBXGroup;
 			children = (
-				52E370D278D2A66E46C723D5E3ECD80B /* Classes */,
+				6884F46A95BD124E1BFDBB17BF1A7285 /* Classes */,
 			);
 			path = NRMirror;
 			sourceTree = "<group>";
@@ -137,14 +137,6 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		52E370D278D2A66E46C723D5E3ECD80B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				010F41DC1D59B4F600CA039F /* NRMirror.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		639D31202B1EBC60D724C06668C7D1F9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +149,14 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/NRMirror";
+			sourceTree = "<group>";
+		};
+		6884F46A95BD124E1BFDBB17BF1A7285 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3370743C7493D967CB48BAD93CCEDFEF /* NRMirror.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -274,7 +274,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44DE5886EC4DD961F827E11F53901DB2 /* Build configuration list for PBXNativeTarget "NRMirror" */;
 			buildPhases = (
-				E984EFDC2324353240FBBB7C75DA72F9 /* Sources */,
+				CBEDF97C0D103C0F0743B59A79BEAF08 /* Sources */,
 				E4DA8E9DB37F16881A90C071FF3360F9 /* Frameworks */,
 				973B61B0EF004667F155CF0CBD25B09A /* Headers */,
 			);
@@ -349,12 +349,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E984EFDC2324353240FBBB7C75DA72F9 /* Sources */ = {
+		CBEDF97C0D103C0F0743B59A79BEAF08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				010F41DD1D59B4F600CA039F /* NRMirror.swift in Sources */,
-				257CE4E317506AD03A97A9456F355EAE /* NRMirror-dummy.m in Sources */,
+				017F3061E2F1F3A1657C80FAAB14BAC0 /* NRMirror-dummy.m in Sources */,
+				49EA78CFC471E67E1312CBBDA953ED78 /* NRMirror.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +374,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82ECED4CA81310FC91278F36FBC1783F /* NRMirror.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -437,7 +436,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82ECED4CA81310FC91278F36FBC1783F /* NRMirror.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;

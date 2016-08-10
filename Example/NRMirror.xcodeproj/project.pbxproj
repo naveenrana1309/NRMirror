@@ -73,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for NRMirror */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				DADD0C99796EF22989C43102 /* Pods */,
@@ -135,6 +134,7 @@
 				F787D08ED64A6DB8C4884D56 /* NRMirror.podspec */,
 				0353AAE476135A2D1327628A /* README.md */,
 				BED95112AC469391BE3DA7A3 /* LICENSE */,
+				607FACD21AFB9204008FA782 /* Example for NRMirror */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
