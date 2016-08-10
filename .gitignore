@@ -1,3 +1,4 @@
+
 <<<<<<< HEAD
 # OS X
 .DS_Store
@@ -24,7 +25,6 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-<<<<<<< HEAD
 *.xccheckout
 profile
 *.moved-aside

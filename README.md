@@ -7,7 +7,7 @@ NRMirror helps you to sync your models with web service response or any input di
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-Xcode 7+ , Swift 2 , iOS 9 and above
+Xcode 7+ , Swiftgit 2 , iOS 9 and above
 
 ## Installation
 
