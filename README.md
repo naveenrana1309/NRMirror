@@ -47,7 +47,6 @@ var categoryArray = [Category]()  // Array of NRMirror subclass
 var subUsers =  [String]() //Array of strings
 var dictTest =  ["categories": [Category]()]  //Dictionary with key as a string and value is any NRMirror class
 
-
 }
 
 
@@ -72,14 +71,14 @@ Xcode 8 and swift 3 compatibility , as many features will change in Swift 3 like
 Contributions are always welcome! (:
 
 1. Fork it ( http://github.com/naveenrana1309/NRMirror/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
+2. Create your feature branch ('git checkout -b my-new-feature')
+3. Commit your changes ('git commit -am 'Add some feature')
+4. Push to the branch ('git push origin my-new-feature')
 5. Create new Pull Request
 
 ## Compatibility
 
-iOS 9+
+Xcode 7+ , Swift 2 , iOS 9 and above
 
 ## Author
 
