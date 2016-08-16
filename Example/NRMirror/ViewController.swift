@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     func liveTest() {
         let jsonString = "{\"userId\": 1 ,\"name\":\"naveen\",\"emailId\":\"naveen@appster\",\"isActiveUser\": true,\"category\":{\"categoryId\": 2 , \"categoryName\": \"testnaveenrana\"},\"categoryArray\":[{\"categoryId\": 1 , \"categoryName\": \"naveen\"}],\"subUsers\":[\"array1\",\"array2\"]}"
         let dict = try! NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding)!, options: .MutableContainers)
-        let user = User(dict: jsonString)
+        let user = User(dict: dict)
         print("name = \(user.name)")
         
     }
@@ -35,14 +35,14 @@ class ViewController: UIViewController {
 
 class User: NRMirror {
     
-    var name: String?
-    var userId = 0
-    var emailId = ""
-    var isActiveUser = false
-    var category: Category?
-    var categoryArray = [Category]()
-    var subUsers =  [String]()
-    var dictTest =  ["categories": [Category]()]
+    var name: String?  //optional string
+    var userId = 0 // integer
+    var emailId = "" //String
+    var isActiveUser = false   //Bool
+    var category: Category?    //Optional NRMirror subclass
+    var categoryArray = [Category]()  // Array of NRMirror subclass
+    var subUsers =  [String]() //Array of strings
+    var dictTest =  ["categories": [Category]()]  //Dictionary with key as a string and value is any NRMirror class
     
     
 }

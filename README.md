@@ -7,6 +7,8 @@
 [![Platform](https://img.shields.io/cocoapods/p/NRMirror.svg?style=flat)](http://cocoapods.org/pods/NRMirror)
 
 
+## Introduction
+
 NRMirror helps you to sync your models with web service response or any input dictionary and. So its work like a object mapper for your project. So dont worry about manually mapping your model object with your json/dictionary , you have to just declare your model and name your key same as your dictionary/Json key and you are done. NRMirror supporting of all types Int, String ,Float , Bool etc.. and NRMirror subclass models. NRMirror is based on swift mirror refelection. For more info about Mirror refer apple doc [Mirror Info](https://developer.apple.com/library/tvos/documentation/Swift/Reference/Swift_Mirror_Structure/index.html)
 
 ## Example
@@ -36,14 +38,14 @@ let user = User(dict: dict) //You can pass any dictionary not neccessarily from 
 ```Swift
 class User: NRMirror {
 
-var name: String?
-var userId = 0
-var emailId = ""
-var isActiveUser = false
-var category: Category?
-var categoryArray = [Category]()    
-var subUsers =  [String]()
-var dictTest =  [categoies: [Category]]()
+var name: String?  //optional string
+var userId = 0 // integer
+var emailId = "" //String
+var isActiveUser = false   //Bool
+var category: Category?    //Optional NRMirror subclass
+var categoryArray = [Category]()  // Array of NRMirror subclass
+var subUsers =  [String]() //Array of strings
+var dictTest =  ["categories": [Category]()]  //Dictionary with key as a string and value is any NRMirror class
 
 
 }
@@ -65,6 +67,19 @@ Following types not supported in NRMirror :
 ## Next Version
 Xcode 8 and swift 3 compatibility , as many features will change in Swift 3 like NSJSONSerialization will change to JSONSerialization and many more and this will led to compiler errors . So i will update this library once its officialy launched by Apple.
 
+## Contributing
+
+Contributions are always welcome! (:
+
+1. Fork it ( http://github.com/naveenrana1309/NRMirror/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+## Compatibility
+
+iOS 9+
 
 ## Author
 
