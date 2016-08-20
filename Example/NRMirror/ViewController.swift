@@ -31,6 +31,18 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func userModelButtonClicked(sender: UIButton) {
+        let jsonString = "{\"userId\": 1 ,\"name\":\"naveen\",\"emailId\":\"naveen@appster\",\"isActiveUser\": true,\"category\":{\"categoryId\": 2 , \"categoryName\": \"testnaveenrana\"},\"categoryArray\":[{\"categoryId\": 1 , \"categoryName\": \"naveen\"}],\"subUsers\":[\"array1\",\"array2\"]}"
+        let dict = try! NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding)!, options: .MutableContainers)
+        let user = User(dict: dict)
+        print("name = \(user.name)")
+        
+        labelUserModel.text = "userId = \(user.userId) \n name = \(user.name) \n emailId = \(user.emailId) "
+    }
+    
+    
+    @IBOutlet weak var labelUserModel: UILabel!
+    
 }
 
 class User: NRMirror {
