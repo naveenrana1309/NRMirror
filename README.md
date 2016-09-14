@@ -63,8 +63,6 @@ Following types not supported in NRMirror :
 - **Array of Optionals** for  var subUsers =  [String?] not allowed.
 - If you are sure value is not going to be optional/nil then intialize property with default value like with blank string or 0 for Int
 
-## Next Version
-Xcode 8 and swift 3 compatibility , as many features will change in Swift 3 like NSJSONSerialization will change to JSONSerialization and many more and this will led to compiler errors . So i will update this library once its officialy launched by Apple.
 
 ## Contributing
 
@@ -78,7 +76,7 @@ Contributions are always welcome! (:
 
 ## Compatibility
 
-Xcode 7+ , Swift 2 , iOS 9 and above
+Xcode 8+ , Swift 3 , iOS 9+ and above
 
 ## Author
 
