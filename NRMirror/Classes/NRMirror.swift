@@ -8,14 +8,14 @@
 
 import Foundation
 
-public
+open
 class NRMirror: NSObject {
     
     
     required override public init() {
         super.init()
     }
-    override public func setValue(value: AnyObject!, forUndefinedKey key: String) {
+    override open func setValue(_ value: Any!, forUndefinedKey key: String) {
         print("\(key) should be in proper format i.e: it should not be optional or it should be of NRMirror type class")
     }
 
@@ -31,13 +31,13 @@ class NRMirror: NSObject {
                     
                     switch childMirrorDisplayStyle {
                         
-                    case .Class,.Struct: // when property is of type NRMirror class
+                    case .class,.struct: // when property is of type NRMirror class
                         
                         if let _ = (childMirror.subjectType as? NRMirror.Type) {
                             if let key = child.label {
                                 if let objectValue = finalDict[key] {
                                     if !(objectValue is NSNull) {
-                                        let subObject = (childMirror.subjectType as! NRMirror.Type).init(dict: objectValue)
+                                        let subObject = (childMirror.subjectType as! NRMirror.Type).init(dict: objectValue as AnyObject)
                                         self.setValue(subObject, forKey: key)
                                         
                                     }
@@ -49,9 +49,9 @@ class NRMirror: NSObject {
                         else {
                             print("Class should be of NRMirror type error:\(childMirror.subjectType) not allowed")
                         }
-                    case .Collection, .Set:
+                    case .collection, .set:
                         
-                        if let className = NRMirror.getClassName(String(childMirror.subjectType)) {
+                        if let className = NRMirror.getClassName(String(describing: childMirror.subjectType)) {
                             if let finalClass =  NSClassFromString("\(NRMirror.getAppName()).\(className)") {
                                 if let _ = (finalClass as? NRMirror.Type) {
                                     if let key = child.label {
@@ -60,7 +60,7 @@ class NRMirror: NSObject {
                                                 if objectValue is NSArray {
                                                     var resultArray = [NRMirror]()
                                                     for objectOfArray in (objectValue as! NSArray) {
-                                                        let subObject = (finalClass as! NRMirror.Type).init(dict: objectOfArray)
+                                                        let subObject = (finalClass as! NRMirror.Type).init(dict: objectOfArray as AnyObject)
                                                         resultArray.append(subObject)
                                                         
                                                     }
@@ -85,7 +85,7 @@ class NRMirror: NSObject {
                                 if let key = child.label {
                                     if let objectValue = finalDict[key] {
                                         if !(objectValue is NSNull) {
-                                            if NRMirror.isArrayDictionaryContainOptionalProperty(String(childMirror.subjectType)) {
+                                            if NRMirror.isArrayDictionaryContainOptionalProperty(String(describing: childMirror.subjectType)) {
                                                 print("Array of optional not supported")
                                                 
                                             }
@@ -108,13 +108,13 @@ class NRMirror: NSObject {
                         else {
                             print("This type of collection format not supported in NRMirror yet")
                         }
-                    case .Dictionary:
+                    case .dictionary:
                         
-                        if let className = NRMirror.getClassName(String(childMirror.subjectType)) {
+                        if let className = NRMirror.getClassName(String(describing: childMirror.subjectType)) {
                             var dictValueClassName = ""
-                            if  className.componentsSeparatedByString(",").count > 0 { // get the value type of dictionary
-                                dictValueClassName = className.componentsSeparatedByString(",").last!
-                                dictValueClassName = dictValueClassName.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+                            if  className.components(separatedBy: ",").count > 0 { // get the value type of dictionary
+                                dictValueClassName = className.components(separatedBy: ",").last!
+                                dictValueClassName = dictValueClassName.trimmingCharacters(in: CharacterSet.whitespaces)
                             }
                             
                             if let finalClass =  NSClassFromString("\(NRMirror.getAppName()).\(dictValueClassName)") {
@@ -126,7 +126,7 @@ class NRMirror: NSObject {
                                                     var finalDict = [String: NRMirror]()
                                                     for (dictKey, dictValue) in (objectValue as! NSDictionary) {
                                                         if dictValue is NSDictionary {
-                                                            let subObject = (finalClass as! NRMirror.Type).init(dict: dictValue)
+                                                            let subObject = (finalClass as! NRMirror.Type).init(dict: dictValue as AnyObject)
                                                             finalDict[dictKey as! String] = subObject
                                                         }
                                                     }
@@ -153,7 +153,7 @@ class NRMirror: NSObject {
                                 if let key = child.label {
                                     if let objectValue = finalDict[key] {
                                         if !(objectValue is NSNull) {
-                                            if NRMirror.isArrayDictionaryContainOptionalProperty(String(childMirror.subjectType)) {
+                                            if NRMirror.isArrayDictionaryContainOptionalProperty(String(describing: childMirror.subjectType)) {
                                                 print("Dictionary of optional not supported")
                                                 
                                             }
@@ -178,15 +178,15 @@ class NRMirror: NSObject {
                         }
                         
                         
-                    case .Optional:
+                    case .optional:
                         
-                        if let className = NRMirror.getClassName(String(childMirror.subjectType)) {
+                        if let className = NRMirror.getClassName(String(describing: childMirror.subjectType)) {
                             if let finalClass =  NSClassFromString("\(NRMirror.getAppName()).\(className)") {
                                 if let _ = (finalClass as? NRMirror.Type) {
                                     if let key = child.label {
                                         if let objectValue = finalDict[key] {
                                             if !(objectValue is NSNull) {
-                                                let subObject = (finalClass as! NRMirror.Type).init(dict: objectValue)
+                                                let subObject = (finalClass as! NRMirror.Type).init(dict: objectValue as AnyObject)
                                                 self.setValue(subObject, forKey: key)
                                                 
                                             }
@@ -245,10 +245,10 @@ class NRMirror: NSObject {
         }
     }
     
-    class func getClassName(className: String) -> String? { // class name i.e <Swift.String>
+    class func getClassName(_ className: String) -> String? { // class name i.e <Swift.String>
         
-        if className.containsString(">") {
-            let subtype = className.componentsSeparatedByString(">")[0].componentsSeparatedByString("<").last
+        if className.contains(">") {
+            let subtype = className.components(separatedBy: ">")[0].components(separatedBy: "<").last
             return subtype
             
         }
@@ -256,26 +256,26 @@ class NRMirror: NSObject {
         
     }
     
-    class func isArrayDictionaryContainOptionalProperty(className: String) -> Bool {
-        if className.containsString("Optional") { // check is array or dictionary contain any optional property
+    class func isArrayDictionaryContainOptionalProperty(_ className: String) -> Bool {
+        if className.contains("Optional") { // check is array or dictionary contain any optional property
             return true
         }
         return false
     }
     
-    class func getAppName(forObject: NSObject? = nil) -> String {
+    class func getAppName(_ forObject: NSObject? = nil) -> String {
         // if an object was specified, then always use the bundle name of that class
         if forObject != nil {
-            return nameForBundle(NSBundle(forClass: forObject!.dynamicType))
+            return nameForBundle(Bundle(for: type(of: forObject!)))
         }
         
         // If no object was specified but an identifier was set, then use that identifier.
         
         // use the bundle name from the main bundle, if that's not set use the identifier
-        return nameForBundle(NSBundle.mainBundle())
+        return nameForBundle(Bundle.main)
     }
     
-    private static func nameForBundle(bundle: NSBundle) -> String {
+    fileprivate static func nameForBundle(_ bundle: Bundle) -> String {
         // get the bundle name from what is set in the infoDictionary
         var appName = bundle.infoDictionary?[kCFBundleNameKey as String] as? String ?? ""
         
@@ -283,12 +283,12 @@ class NRMirror: NSObject {
         if appName == "" {
             appName = bundle.bundleIdentifier ?? ""
         }
-        appName = appName.characters.split(isSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
+        appName = appName.characters.split(whereSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
         
         // remove special characters and join them with _
-        return appName.componentsSeparatedByCharactersInSet(specialIllegalCharacterSet).joinWithSeparator("_")
+        return appName.components(separatedBy: specialIllegalCharacterSet).joined(separator: "_")
     }
     /// Character that will be replaced by _ from the keys in a dictionary / json
-    private static let specialIllegalCharacterSet = NSCharacterSet(charactersInString: " -&%#@!$^*()<>?.,:;")
+    fileprivate static let specialIllegalCharacterSet = CharacterSet(charactersIn: " -&%#@!$^*()<>?.,:;")
     
 }
