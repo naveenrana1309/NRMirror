@@ -18,7 +18,7 @@ class NRMirror: NSObject {
     override open func setValue(_ value: Any!, forUndefinedKey key: String) {
         print("\(key) should be in proper format i.e: it should not be optional or it should be of NRMirror type class")
     }
-
+    
     required public init(dict: AnyObject) {
         super.init()
         let mirror = Mirror(reflecting: self) // NRMirror subclass mirroring
@@ -130,7 +130,7 @@ class NRMirror: NSObject {
                                                             finalDict[dictKey as! String] = subObject
                                                         }
                                                     }
-
+                                                    
                                                     
                                                     self.setValue(finalDict, forKey: key)
                                                     
@@ -202,14 +202,14 @@ class NRMirror: NSObject {
                                     if let objectValue = finalDict[key] {
                                         if !(objectValue is NSNull) {
                                             if objectValue is Int {
-                                             print("\(key) Int should not be of optional type , please intialize to some default value")
-
+                                                print("\(key) Int should not be of optional type , please intialize to some default value")
+                                                
                                             }
                                             else {
                                                 self.setValue(objectValue , forKey: key)
-
+                                                
                                             }
-
+                                            
                                             
                                         }
                                     }
