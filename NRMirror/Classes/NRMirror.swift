@@ -284,7 +284,7 @@ class NRMirror: NSObject {
         if appName == "" {
             appName = bundle.bundleIdentifier ?? ""
         }
-        appName = appName.characters.split(whereSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
+        appName = appName.split(whereSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
         
         // remove special characters and join them with _
         return appName.components(separatedBy: specialIllegalCharacterSet).joined(separator: "_")
