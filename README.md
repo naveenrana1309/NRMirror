@@ -86,7 +86,7 @@ Naveen Rana. [See Profile](https://www.linkedin.com/in/naveen-rana-9a371a40)
 Email: 
 naveenrana1309@gmail.com. 
 
-Check out [Facebook Page](https://www.facebook.com/iOSByHeart/) for detail.
+Check out [Facebook Page](https://www.facebook.com/naveen.rana.146) for detail.
 
 ## License
 
