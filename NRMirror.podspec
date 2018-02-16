@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NRMirror'
-s.version          = '1.2.4'
+s.version          = '2.0.0'
 s.summary          = 'NRMirror helps you to sync your model with web service response or any input dictionary.So its work like a object mapper for you.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ s.author           = { 'naveenrana1309' => 'naveenrana1309@gmail.com' }
 s.source           = { :git => 'https://github.com/naveenrana1309/NRMirror.git', :tag => s.version.to_s }
 s.social_media_url = 'https://www.linkedin.com/in/naveen-rana-9a371a40'
 
-s.ios.deployment_target = '8.0'
+s.ios.deployment_target = '10.0'
 
 s.source_files = 'NRMirror/Classes/**/*'
 
