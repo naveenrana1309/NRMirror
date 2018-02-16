@@ -8,6 +8,7 @@
 
 import Foundation
 
+@objcMembers
 open
 class NRMirror: NSObject {
     
@@ -19,7 +20,7 @@ class NRMirror: NSObject {
         print("\(key) should be in proper format i.e: it should not be optional or it should be of NRMirror type class")
     }
     
-    required public init(dict: AnyObject) {
+    required public init(dict: Any) {
         super.init()
         let mirror = Mirror(reflecting: self) // NRMirror subclass mirroring
         
