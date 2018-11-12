@@ -16,7 +16,7 @@ NRMirror helps you to sync your models with web service response or any input di
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-Xcode 9+ , Swift 4 , iOS 9 and above
+Xcode 10+ , Swift 4 , iOS 10 and above
 
 ## Installation
 
@@ -63,7 +63,7 @@ Following types not supported in NRMirror :
 - **Array of Optionals** for  var subUsers =  [String?] not allowed.
 - If you are sure value is not going to be optional/nil then intialize property with default value like with blank string or 0 for Int
 
-##Update: Xcode 9+ support now
+##Update: Xcode 10+ support now
 
 ## Contributing
 
@@ -77,7 +77,7 @@ Contributions are always welcome! (:
 
 ## Compatibility
 
-Xcode 9+ , Swift 4 , iOS 9+ and above
+Xcode 10+ , Swift 4 , iOS 10+ and above
 
 ## Author
 
